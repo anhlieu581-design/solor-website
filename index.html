@@ -7,81 +7,219 @@
 
 <style>
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial;background:#fff8ed;color:#111}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#fff8ed;
+  color:#111;
+}
 
 header{
-  background:#111;color:white;padding:18px 8%;
-  display:flex;justify-content:space-between;position:sticky;top:0
+  background:#111;
+  color:white;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
-.logo{color:#ffd04a;font-weight:bold;font-size:22px}
 
-nav a{color:white;margin-left:20px;text-decoration:none}
+.logo{
+  color:#ffd04a;
+  font-weight:bold;
+  font-size:22px;
+}
+
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+}
 
 .hero{
   height:90vh;
-  background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)),
-  url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7");
-  background-size:cover;display:flex;align-items:center;padding:0 8%;
+  background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
   color:white;
 }
 
-.hero h1{font-size:60px}
-.hero p{margin-top:20px;max-width:600px}
-
-.btn{
-  display:inline-block;margin-top:25px;padding:12px 30px;
-  background:#c90000;color:white;border-radius:30px;text-decoration:none
+.hero h1{
+  font-size:60px;
+  max-width:750px;
 }
 
-section{padding:80px 8%;text-align:center}
+.hero p{
+  margin-top:20px;
+  max-width:620px;
+  line-height:1.6;
+  font-size:19px;
+}
 
-.tag{color:#c90000;font-weight:bold;text-transform:uppercase}
-h2{font-size:40px}
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 32px;
+  background:linear-gradient(135deg,#c90000,#ff7a00);
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 10px 25px rgba(255,80,0,.35);
+}
 
-.sub{max-width:700px;margin:auto;color:#555}
+section{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.tag{
+  color:#c90000;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+h2{
+  font-size:40px;
+  margin:10px 0 20px;
+}
+
+.sub{
+  max-width:760px;
+  margin:0 auto 40px;
+  color:#555;
+  line-height:1.7;
+  font-size:17px;
+}
+
+.product{
+  background:white;
+}
 
 .product-wrap{
-  display:grid;grid-template-columns:1fr 1fr;gap:40px;
-  align-items:center;text-align:left
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  text-align:left;
+}
+
+.product-text p{
+  line-height:1.7;
+  color:#555;
+  margin-bottom:15px;
+  font-size:17px;
 }
 
 .product img{
-  width:100%;border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,.25)
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
 
-.product-text p{line-height:1.7;color:#555;margin-bottom:15px}
-
 .grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;margin-top:30px
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin-top:35px;
 }
 
 .card{
-  background:white;padding:25px;border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,.1)
+  background:white;
+  padding:32px;
+  border-radius:24px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  transition:.3s;
 }
 
-.icon{font-size:40px;margin-bottom:10px}
-.card h3{color:#c90000}
+.card:hover{
+  transform:translateY(-7px);
+}
 
-.app{background:#111;color:white}
-.app .sub{color:#ddd}
+.icon{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  color:#c90000;
+  font-size:23px;
+  margin-bottom:10px;
+}
+
+.card p{
+  margin:7px 0;
+  color:#666;
+  line-height:1.6;
+}
+
+.app{
+  background:#111;
+  color:white;
+}
+
+.app .sub{
+  color:#ddd;
+}
 
 .app img{
-  width:100%;max-width:1100px;margin-top:30px;
+  width:100%;
+  max-width:1100px;
+  margin-top:30px;
   border-radius:25px;
-  box-shadow:0 30px 80px rgba(255,80,0,.4)
+  box-shadow:0 30px 80px rgba(255,80,0,.4);
 }
 
-.price{font-size:30px;color:#ff7a00}
+.price{
+  font-size:34px;
+  font-weight:bold;
+  color:#ff7a00;
+  margin:12px 0;
+}
+
+.popular{
+  border:3px solid #ff9f1c;
+  transform:scale(1.05);
+}
+
+.rental{
+  background:linear-gradient(135deg,#c90000,#ff7a00,#ffd000);
+  color:white;
+}
+
+.rental .sub{
+  color:white;
+}
+
+.cta{
+  background:#111;
+  color:white;
+}
+
+.cta .sub{
+  color:#ddd;
+}
 
 footer{
-  background:#c90000;color:white;padding:30px;text-align:center
+  background:#c90000;
+  color:white;
+  text-align:center;
+  padding:30px;
 }
 
 @media(max-width:800px){
   nav{display:none}
+  .hero h1{font-size:40px}
   .product-wrap{grid-template-columns:1fr;text-align:center}
 }
 </style>
@@ -104,13 +242,12 @@ footer{
     <h1>Smart Solar Power for Your Vehicle</h1>
     <p>
       SolarDrive helps drivers use clean solar energy, reduce waste,
-      and track performance through a smart dashboard.
+      support battery power, and track performance through a smart mobile dashboard.
     </p>
     <a href="#pricing" class="btn">View Pricing</a>
   </div>
 </div>
 
-<!-- 🔥 PRODUCT (ĐÃ NÂNG CẤP) -->
 <section id="product" class="product">
   <p class="tag">Our Product</p>
   <h2>Vehicle Solar Panel System</h2>
@@ -136,73 +273,106 @@ footer{
       <a class="btn" href="#features">Explore Features</a>
     </div>
 
-    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276">
+    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276" alt="Solar panel">
   </div>
 </section>
 
-<!-- FEATURES -->
 <section id="features">
   <p class="tag">Why Choose Us</p>
-  <h2>Smart Features</h2>
+  <h2>Smarter Energy, Better Driving</h2>
+  <p class="sub">
+    SolarDrive combines clean energy, smart technology, and convenience
+    to improve the driving experience for modern vehicles.
+  </p>
 
   <div class="grid">
     <div class="card">
       <div class="icon">☀️</div>
-      <h3>UV Energy</h3>
-      <p>Use sunlight efficiently</p>
+      <h3>Smart Solar Power</h3>
+      <p>Capture sunlight and turn it into useful energy for your vehicle.</p>
     </div>
 
     <div class="card">
       <div class="icon">📱</div>
-      <h3>App Tracking</h3>
-      <p>Monitor energy anytime</p>
+      <h3>Real-Time Tracking</h3>
+      <p>Monitor energy, battery support, and performance anytime.</p>
     </div>
 
     <div class="card">
       <div class="icon">🔋</div>
       <h3>Battery Support</h3>
-      <p>Supports vehicle systems</p>
+      <p>Reduce energy waste and support vehicle systems efficiently.</p>
     </div>
   </div>
 </section>
 
-<!-- APP -->
 <section id="app" class="app">
   <p class="tag">Mobile App</p>
   <h2>Track Your Solar Energy Anytime</h2>
   <p class="sub">
-    Monitor energy, battery status, and savings in one clean dashboard.
+    The SolarDrive app shows energy, battery status, savings, and system performance
+    in one clean dashboard.
   </p>
 
-  <img src="ChatGPT Image May 4, 2026, 11_31_35 PM.png">
+  <img src="ChatGPT Image May 4, 2026, 11_31_35 PM.png" alt="SolarDrive app dashboard">
 </section>
 
-<!-- PRICING -->
 <section id="pricing">
-  <h2>Pricing</h2>
+  <p class="tag">Pricing</p>
+  <h2>Choose Your Plan</h2>
+  <p class="sub">
+    Flexible options designed for different vehicles, budgets, and driving needs.
+  </p>
 
   <div class="grid">
     <div class="card">
       <h3>Basic</h3>
       <div class="price">$599</div>
+      <p>Small solar panel</p>
+      <p>Basic energy support</p>
+      <p>Best for small cars</p>
     </div>
 
-    <div class="card">
+    <div class="card popular">
       <h3>Standard</h3>
       <div class="price">$1,199</div>
+      <p>Higher power output</p>
+      <p>Better efficiency</p>
+      <p>Best for EVs & SUVs</p>
     </div>
 
     <div class="card">
       <h3>Premium</h3>
       <div class="price">$2,499</div>
+      <p>High-performance system</p>
+      <p>Full smart tracking</p>
+      <p>Best for fleet & vans</p>
     </div>
   </div>
+</section>
+
+<section class="rental">
+  <p class="tag">Rental Plan</p>
+  <h2>More Affordable Access</h2>
+  <p class="sub">
+    Customers can rent SolarDrive starting at $79/month with a 12–24 month agreement.
+    This makes the product easier to access while creating stable recurring revenue.
+  </p>
+  <a class="btn" href="#pricing">Compare Plans</a>
+</section>
+
+<section class="cta">
+  <h2>Start Your Solar Journey Today</h2>
+  <p class="sub">
+    Safe. Smart. Sustainable. SolarDrive is built for the future of transportation.
+  </p>
+  <a class="btn" href="#pricing">Get Started</a>
 </section>
 
 <footer>
   <h3>SolarDrive</h3>
   <p>Smart solar energy for modern vehicles</p>
-  <p style="font-size:13px;opacity:.8;">© 2026 SolarDrive</p>
+  <p style="font-size:13px;opacity:.8;">© 2026 SolarDrive. All rights reserved.</p>
 </footer>
 
 </body>
