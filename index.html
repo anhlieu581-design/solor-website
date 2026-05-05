@@ -23,7 +23,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(17, 17, 17, 0.85);
+      background: rgba(17, 17, 17, 0.9);
       backdrop-filter: blur(12px);
       color: white;
       padding: 18px 8%;
@@ -41,7 +41,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 22px;
+      margin-left: 18px;
       font-size: 14px;
       transition: 0.3s;
     }
@@ -53,7 +53,7 @@
     .hero {
       min-height: 92vh;
       background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.68)),
         url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7");
       background-size: cover;
       background-position: center;
@@ -64,7 +64,7 @@
     }
 
     .hero-content {
-      max-width: 720px;
+      max-width: 760px;
       animation: fadeIn 1.2s ease;
     }
 
@@ -121,7 +121,7 @@
     }
 
     .sub {
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto 45px;
       line-height: 1.7;
       color: #555;
@@ -187,13 +187,62 @@
       box-shadow: 0 16px 38px rgba(0,0,0,0.25);
     }
 
-    .app {
+    .dark {
       background: #111;
       color: white;
     }
 
-    .app .sub {
+    .dark .sub {
       color: #ddd;
+    }
+
+    .app-box {
+      max-width: 360px;
+      margin: 30px auto 0;
+      background: #050505;
+      border: 10px solid #222;
+      border-radius: 36px;
+      padding: 25px;
+      box-shadow: 0 22px 55px rgba(0,0,0,0.45);
+      text-align: left;
+    }
+
+    .app-box h3 {
+      color: #ffd04a;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .app-card {
+      background: #181818;
+      padding: 16px;
+      border-radius: 18px;
+      margin-bottom: 14px;
+    }
+
+    .app-card p {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .app-card h4 {
+      color: #ff9f1c;
+      font-size: 24px;
+      margin-top: 6px;
+    }
+
+    .bar {
+      background: #333;
+      height: 10px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+
+    .fill {
+      width: 72%;
+      height: 100%;
+      background: linear-gradient(90deg, #ff2b2b, #ffd000);
     }
 
     .price {
@@ -231,17 +280,43 @@
       color: white;
     }
 
-    .channel {
-      background: white;
+    .faq {
+      text-align: left;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .cta {
+    .faq-item {
+      background: white;
+      padding: 24px;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #c90000;
+      margin-bottom: 8px;
+    }
+
+    .contact {
       background: #111;
       color: white;
     }
 
-    .cta .sub {
-      color: #ddd;
+    .contact-box {
+      background: white;
+      color: #222;
+      max-width: 700px;
+      margin: auto;
+      padding: 35px;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      color: #555;
     }
 
     footer {
@@ -266,7 +341,7 @@
       }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       nav {
         display: none;
       }
@@ -297,10 +372,11 @@
   <div class="logo">SolarDrive</div>
   <nav>
     <a href="#product">Product</a>
+    <a href="#works">How It Works</a>
     <a href="#features">Features</a>
     <a href="#app">App</a>
     <a href="#pricing">Pricing</a>
-    <a href="#sales">Sales</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -308,8 +384,8 @@
   <div class="hero-content">
     <h1>Smart Solar Power for <span>Your Vehicle</span></h1>
     <p>
-      SolarDrive is a smart solar panel system designed for cars, EVs, vans, and fleet vehicles.
-      It helps drivers use clean energy, absorb UV power, support battery use, and track performance through a mobile app.
+      SolarDrive is a smart solar panel system designed for cars, EVs, vans, RVs, and fleet vehicles.
+      It helps drivers use clean solar energy, absorb UV power, support battery use, and track performance through a mobile app.
     </p>
     <a class="btn" href="#pricing">View Plans</a>
   </div>
@@ -327,12 +403,40 @@
       </p>
       <p>
         The system is useful for electric vehicles, daily drivers, vans, RVs, and fleet businesses.
-        It combines solar technology with a simple app dashboard.
+        It combines solar technology with a simple app dashboard for easy tracking.
       </p>
       <a class="btn" href="#features">Explore Features</a>
     </div>
 
     <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276" alt="Solar panel system">
+  </div>
+</section>
+
+<section id="works" class="fade">
+  <p class="tag">How It Works</p>
+  <h2>Simple, Smart, and Clean</h2>
+  <p class="sub">
+    SolarDrive makes solar power easy to understand and simple to use for everyday drivers.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="icon">1️⃣</div>
+      <h3>Install the Panel</h3>
+      <p>The solar panel is installed on the vehicle to collect sunlight and UV energy.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">2️⃣</div>
+      <h3>Generate Energy</h3>
+      <p>The system converts solar energy into useful power for vehicle support.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">3️⃣</div>
+      <h3>Track with App</h3>
+      <p>Users can monitor energy output, battery support, and savings in the app.</p>
+    </div>
   </div>
 </section>
 
@@ -353,7 +457,7 @@
     <div class="card">
       <div class="icon">📱</div>
       <h3>Smart App Tracking</h3>
-      <p>Drivers can monitor energy output, solar performance, and battery support anytime.</p>
+      <p>Drivers can monitor solar performance, battery support, and energy savings anytime.</p>
     </div>
 
     <div class="card">
@@ -370,15 +474,63 @@
   </div>
 </section>
 
-<section id="app" class="app fade">
+<section id="app" class="dark fade">
   <p class="tag">Mobile App</p>
   <h2>Track Solar Energy Anytime</h2>
   <p class="sub">
-    The SolarDrive app gives users a clean dashboard to check solar energy, battery support,
-    performance, and savings from their phone or iPad.
+    The SolarDrive app gives users a dashboard to check solar energy, battery support,
+    UV absorption, system status, and savings from their phone or iPad.
   </p>
 
-  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Smart app dashboard">
+  <div class="app-box">
+    <h3>SolarDrive App</h3>
+
+    <div class="app-card">
+      <p>Energy Today</p>
+      <h4>2.4 kWh</h4>
+    </div>
+
+    <div class="app-card">
+      <p>Battery Support</p>
+      <h4>68%</h4>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="app-card">
+      <p>UV Absorption</p>
+      <h4>High ☀️</h4>
+    </div>
+
+    <div class="app-card">
+      <p>Status</p>
+      <h4>Running Smoothly</h4>
+    </div>
+  </div>
+</section>
+
+<section class="fade">
+  <p class="tag">Benefits</p>
+  <h2>Why Customers Need SolarDrive</h2>
+
+  <div class="grid">
+    <div class="card">
+      <div class="icon">💰</div>
+      <h3>Save Energy</h3>
+      <p>Helps reduce energy waste by using sunlight for small charging needs.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚗</div>
+      <h3>Great for Vehicles</h3>
+      <p>Works for cars, EVs, vans, RVs, and fleet vehicles.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Easy to Track</h3>
+      <p>The app makes performance and energy data easy to understand.</p>
+    </div>
+  </div>
 </section>
 
 <section id="pricing" class="fade">
@@ -419,15 +571,12 @@
     Customers can rent SolarDrive starting at $79/month with a 12–24 month agreement.
     This makes the product more affordable and creates recurring revenue for the company.
   </p>
-  <a class="btn" href="#pricing">Start Rental Plan</a>
+  <a class="btn" href="#contact">Start Rental Plan</a>
 </section>
 
-<section id="sales" class="channel fade">
+<section id="sales" class="fade">
   <p class="tag">Sales Channels</p>
   <h2>How We Sell</h2>
-  <p class="sub">
-    SolarDrive uses multiple sales channels to reach customers directly and through partnerships.
-  </p>
 
   <div class="grid">
     <div class="card">
@@ -450,12 +599,69 @@
   </div>
 </section>
 
-<section class="cta fade">
+<section class="dark fade">
+  <p class="tag">Customer Reviews</p>
+  <h2>What Drivers Say</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>★★★★★</h3>
+      <p>“SolarDrive makes my EV feel smarter and more eco-friendly.”</p>
+    </div>
+
+    <div class="card">
+      <h3>★★★★★</h3>
+      <p>“The app dashboard is simple and easy to understand.”</p>
+    </div>
+
+    <div class="card">
+      <h3>★★★★★</h3>
+      <p>“A great idea for fleets and delivery vehicles.”</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade">
+  <p class="tag">FAQ</p>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <div class="faq-item">
+      <h3>Does SolarDrive fully charge a car?</h3>
+      <p>No. It mainly supports auxiliary charging and helps reduce energy waste.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What vehicles can use SolarDrive?</h3>
+      <p>It can be used for cars, EVs, vans, RVs, and fleet vehicles.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does the app come with the product?</h3>
+      <p>Yes. The app helps users track solar energy, battery support, and performance.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is there a rental option?</h3>
+      <p>Yes. Customers can rent the product starting at $79/month with a 12–24 month agreement.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact fade">
+  <p class="tag">Contact Us</p>
   <h2>Start Your Solar Journey Today</h2>
   <p class="sub">
     Safe. Smart. Sustainable. SolarDrive is built for the future of transportation.
   </p>
-  <a class="btn" href="#pricing">Get Started</a>
+
+  <div class="contact-box">
+    <h3>SolarDrive</h3>
+    <p>Email: info@solardrive.com</p>
+    <p>Phone: (316) 555-2026</p>
+    <p>Location: Wichita, Kansas</p>
+    <a class="btn" href="#pricing">Get Started</a>
+  </div>
 </section>
 
 <footer>
@@ -464,4 +670,3 @@
 
 </body>
 </html>
-<!-- update -->
